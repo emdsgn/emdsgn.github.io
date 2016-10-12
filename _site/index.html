@@ -117,13 +117,38 @@
 		<div class="unit unit-s-1 unit-m-1-2 unit-l-1-2">
 			<div class="unit-spacer">
 				<h2>Let's have some fun -</h2>
-				<form action="" method="post">
-    <input type="text" name="name" />
-    <input type="mail" name="email" />
-    <input type="text" name="subject" />
-    <textarea name="message"></textarea>
-    <button>Send Mail</button>
-  </form>
+				<form id="contact" name="contact" method="post">  
+  <fieldset>  
+    <label for="name" id="name">Name<span class="required">*</span></label>
+    <input type="text" name="name" id="name" size="30" value="" required/>
+
+    <label for="email" id="email">Email<span class="required">*</span></label>
+    <input type="text" name="email" id="email" size="30" value="" required/>
+
+    <label for="phone" id="phone">Phone</label>
+    <input type="text" name="phone" id="phone" size="30" value="" />
+
+    <label for="Message" id="message">Message<span class="required">*</span></label>
+    <textarea name="message" id="message" required></textarea>
+
+    <label for="Captcha" id="captcha">Name the small house pet that says "<i>meow</i>"<span class="required">*</span></label>
+    <input type="text" name="captcha" value="" required/>
+
+    <input id="submit" type="submit" name="submit" value="Send" />  
+  </fieldset>  
+</form>
+
+<div id="success">
+  <span>
+    <p>Your message was sent succssfully! I will be in touch as soon as I can.</p>
+  </span>
+</div>
+
+<div id="error">
+  <span>
+    <p>Something went wrong, try refreshing and submitting the form again.</p>
+  </span>
+</div>
 
 			</div>
 		</div>
@@ -135,6 +160,72 @@
 <!-- classie.js by @desandro: https://github.com/desandro/classie -->
 	<script src="js/classie.js"></script>
 	<script src="js/cbpAnimatedHeader.min.js"></script>
-	<script src="js/contactform.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+<script type="text/javascript">
+jQuery.validator.addMethod('answercheck', function (value, element) {
+        return this.optional(element) || /^\bcat\b$/.test(value);
+    }, "type the correct answer -_-");
+
+// validate contact form
+$(function() {
+    $('#contact').validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            message: {
+                required: true
+            },
+            answer: {
+                required: true,
+                answercheck: true
+            }
+        },
+        messages: {
+            name: {
+                required: "come on, you have a name don't you?",
+                minlength: "your name must consist of at least 2 characters"
+            },
+            email: {
+                required: "no email, no message"
+            },
+            message: {
+                required: "um...yea, you have to write something to send this form.",
+                minlength: "thats all? really?"
+            },
+            answer: {
+                required: "sorry, wrong answer!"
+            }
+        },
+        submitHandler: function(form) {
+            $(form).ajaxSubmit({
+                type:"POST",
+                data: $(form).serialize(),
+                url:"process.php",
+                success: function() {
+                    $('#contact :input').attr('disabled', 'disabled');
+                    $('#contact').fadeTo( "slow", 0.15, function() {
+                        $(this).find(':input').attr('disabled', 'disabled');
+                        $(this).find('label').css('cursor','default');
+                        $('#success').fadeIn();
+                    });
+                },
+                error: function() {
+                    $('#contact').fadeTo( "slow", 0.15, function() {
+                        $('#error').fadeIn();
+                    });
+                }
+            });
+        }
+    });
+});
+</script>
+
 </body>
 </html>
