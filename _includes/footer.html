@@ -10,51 +10,22 @@
 		<div class="unit unit-s-1 unit-m-1-2 unit-l-1-2">
 			<div class="unit-spacer">
 				<h2>Let's have some fun -</h2>
-				<form name="htmlform" method="post" action="html_form_send.php">
-<table width="450px">
-</tr>
-<tr>
- <td valign="top">
-  <label for="first_name">First Name *</label>
- </td>
- <td valign="top">
-  <input  type="text" name="first_name" maxlength="50" size="30">
- </td>
-</tr>
+				<form method="post" action="index.php">
+        
+    <label>Name</label>
+    <input name="name" placeholder="Type Here">
+            
+    <label>Email</label>
+    <input name="email" type="email" placeholder="Type Here">
+            
+    <label>Message</label>
+    <textarea name="message" placeholder="Type Here"></textarea>
 
-<tr>
- <td valign="top">
-  <label for="last_name">Last Name *</label>
- </td>
- <td valign="top">
-  <input  type="text" name="last_name" maxlength="50" size="30">
- </td>
-</tr>
-<tr>
- <td valign="top">
-  <label for="email">Email Address *</label>
- </td>
- <td valign="top">
-  <input  type="text" name="email" maxlength="80" size="30">
- </td>
-
-</tr>
-<tr>
- <td valign="top">
-  <label for="comments">Comments *</label>
- </td>
- <td valign="top">
-  <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
- </td>
-
-</tr>
-<tr>
- <td colspan="2" style="text-align:center">
-  <!-- We are grateful to you for keeping this link in place. thank you. -->
-  <input type="submit" value="Submit"> 
- </td>
-</tr>
-</table>
+    <label>*What is 2+2? (Anti-spam)</label>
+<input name="human" placeholder="Type Here">
+            
+    <input id="submit" name="submit" type="submit" value="Submit">
+        
 </form>
 			</div>
 		</div>
