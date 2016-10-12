@@ -28,7 +28,7 @@ body {
     width: 100%;
     vertical-align: middle;
     max-width: 150px;
-    padding: 1em 0;
+    padding: 0.5em;
 }
 
 .mobile {
@@ -47,15 +47,29 @@ body {
 
 .logo {
     vertical-align: inherit;
-    display: inline-block;
-    width: 30%;
+    display: block;
+    text-align: center;
 }
 
-.cbp-af-header-shrink .flex-logo {
-    max-width: 120px;
-    padding: 0.5em 0;
+.cbp-af-header h1,
+.cbp-af-header nav {
+    padding: 1em 0;
 }
 
+.cbp-af-header-shrink {
+    border-bottom: 1px solid #E394A7;
+}
+
+.cbp-af-header h1,
+  .cbp-af-header nav {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    float: none;
+    width: 100%;
+  }
+
+/* COMMON CSS */
 .body {
   margin: 0;
   text-align: justify;
@@ -73,9 +87,19 @@ body {
   font-weight: bold;
   transition: all 0.8s;
 }
-
 h2 {
   color: #E394A7;
+  margin: 0;
+}
+.anchor {
+    display: block;
+    height: 144px;
+    margin-top: -144px;
+    visibility: hidden;
+}
+.flex-img {
+  width: 100%;
+  display: block;
 }
 
 /* HEADER IMG */
@@ -121,9 +145,9 @@ section.module.parallax h1 {
     letter-spacing: -2px;
     text-align: center;
     margin: 0;
-    padding: 330px 0 170px 0px;
+    padding: 330px 1em 170px 1em;
     text-transform: uppercase;
-    line-height: normal;
+    line-height: 51px;
 }
 section.module.parallax-1 {
   background-image: url("../img/mandala.jpg");
@@ -138,6 +162,7 @@ section.module.parallax-1 {
     letter-spacing: 1px;
     text-transform: uppercase;
     font-style: italic;
+    line-height: 20px;
 }
 
 /* PROJECTS */
@@ -193,6 +218,7 @@ section.module.parallax-1 {
     margin: 0 auto;
     background: #FFF;
     border-top: 1px solid #E394A7;
+    padding: 2em;
 }
 .contactForm input, .contactForm textarea {
     display: block;
@@ -219,18 +245,14 @@ section.module.parallax-1 {
     text-transform: uppercase;
 }
 .hello {
-    margin: 0;
     position: absolute;
     color: rgba(227,148,167,0.5);
    font-size: 3em;
-    left: 266px;
+       margin-left: -40px;
 }
 .helloContent {
     z-index: 1000;
         padding-top: 2.8em;
-}
-.footerContent .unit-spacer {
-    padding: 2em;
 }
 .copyright {
   background-color: #E394A7;
@@ -242,7 +264,43 @@ section.module.parallax-1 {
   font-size: 0.8em;
 }
 
-
+@media only screen and (min-width: 33em) {
+  .logo {
+    vertical-align: inherit;
+    display: inline-block;
+    width: 30%;
+    text-align: left;
+  }
+  .cbp-af-header h1,
+  .cbp-af-header nav a {
+    line-height: 115px;
+  }
+  .cbp-af-header.cbp-af-header-shrink {
+  height: 90px;
+  }
+  .cbp-af-header-shrink .flex-logo {
+    max-width: 120px;
+    padding: 0.5em;
+  }
+  .cbp-af-header.cbp-af-header-shrink h1,
+  .cbp-af-header.cbp-af-header-shrink nav a {
+  line-height: 90px;
+  }
+  .cbp-af-header h1, .cbp-af-header nav {
+    display: inline-block;
+    position: relative;
+    width: 69%;
+    text-align: right;
+    padding: 0;
+  }
+  .anchor {
+    height: 90px;
+    margin-top: -90px;
+  }
+  .helloContent {
+    padding-right: 2em;
+  }
+}
 .grid {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
@@ -325,7 +383,7 @@ section.module.parallax-1 {
     width: 20%;
   }
 }
-@media only screen and (min-width: 64em) {
+@media only screen and (min-width: 60em) {
   .unit-l-hidden {
     display: none;
     visibility: hidden;
@@ -377,14 +435,6 @@ section.module.parallax-1 {
 	margin: 0 auto;
 }
 
-.cbp-af-header h1,
-.cbp-af-header nav {
-	display: inline-block;
-	position: relative;
-	width: 69%;
-	text-align: right;
-}
-
  /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
 
 .cbp-af-header h1 {
@@ -421,46 +471,14 @@ section.module.parallax-1 {
 	transition: all 0.3s;
 }
 
-.cbp-af-header.cbp-af-header-shrink {
-	height: 90px;
-}
-
-.cbp-af-header.cbp-af-header-shrink h1,
-.cbp-af-header.cbp-af-header-shrink nav a {
-	line-height: 90px;
-}
-
 .cbp-af-header.cbp-af-header-shrink h1 {
 	font-size: 2em;
 }
 
 /* Example Media Queries */
 @media screen and (max-width: 55em) {
-	
-	.cbp-af-header .cbp-af-inner {
-		width: 100%;
-	}
-
-	.cbp-af-header h1,
-	.cbp-af-header nav {
-		display: block;
-		margin: 0 auto;
-		text-align: center;
-		float: none;
-	}
-
-	.cbp-af-header h1,
-	.cbp-af-header nav a {
-		line-height: 115px;
-	}
-
 	.cbp-af-header nav a {
 		margin: 0 10px;
-	}
-
-	.cbp-af-header.cbp-af-header-shrink h1,
-	.cbp-af-header.cbp-af-header-shrink nav a {
-		line-height: 45px;
 	}
 
 	.cbp-af-header.cbp-af-header-shrink h1 {
