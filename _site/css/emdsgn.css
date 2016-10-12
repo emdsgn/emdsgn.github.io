@@ -27,7 +27,7 @@ body {
 .flex-logo {
     width: 100%;
     vertical-align: middle;
-    max-width: 100px;
+    max-width: 150px;
     padding: 1em 0;
 }
 
@@ -46,11 +46,13 @@ body {
 }
 
 .logo {
-  float: left;
+    vertical-align: inherit;
+    display: inline-block;
+    width: 30%;
 }
 
 .cbp-af-header-shrink .flex-logo {
-    max-width: 75px;
+    max-width: 120px;
     padding: 0.5em 0;
 }
 
@@ -82,7 +84,7 @@ section.module p:last-child {
 }
 section.module.parallax {
   height: 600px;
-  background-position: bottom;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   -webkit-background-size: cover;
@@ -91,28 +93,29 @@ section.module.parallax {
   background-size: cover;
 }
 section.module.parallax h1 {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.55);
     font-size: 3.5em;
-    line-height: normal;
     font-weight: 300;
     letter-spacing: -2px;
     text-align: center;
     margin: 0;
-    padding: 193px 10px;
-    font-family: 'Roboto', sans-serif;
+    padding: 330px 0 170px 0px;
+    text-transform: uppercase;
+    line-height: normal;
 }
 section.module.parallax-1 {
   background-image: url("../img/mandala.jpg");
-      padding: 128px 0 0px;
 }
 .parallax-1 .container {
     background: rgba(0,0,0,0.5);
+    height: 600px;
 }
 .parallax-1 p {
     font-weight: 100!important;
     margin: 0;
     letter-spacing: 1px;
     text-transform: uppercase;
+    font-style: italic;
 }
 
 /* PROJECTS */
@@ -159,6 +162,13 @@ section.module.parallax-1 {
 
 .image3:hover {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/mandala.jpg");
+}
+
+.footerContent {
+    width: 90%;
+    max-width: 1380px;
+    margin: 0 auto;
+    background: #FFF;
 }
 
 
@@ -283,7 +293,7 @@ section.module.parallax-1 {
 	top: 0;
 	left: 0;
 	width: 100%;
-	    background: #AFCD69;
+	    background: #FFFFFF;
 	z-index: 10000;
 	overflow: hidden;
 	-webkit-transition: height 0.3s;
@@ -301,13 +311,11 @@ section.module.parallax-1 {
 .cbp-af-header nav {
 	display: inline-block;
 	position: relative;
+	width: 69%;
+	text-align: right;
 }
 
  /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
-.cbp-af-header h1,
-.cbp-af-header nav a {
-	line-height: 230px;
-}
 
 .cbp-af-header h1 {
 	text-transform: uppercase;
@@ -321,15 +329,14 @@ section.module.parallax-1 {
     font-weight: 600;
 }
 
-.cbp-af-header nav {
-	float: right;
-}
-
 .cbp-af-header nav a {
-	color: #aaa;
-	font-weight: 700;
-	margin: 0 0 0 20px;
-	font-size: 1.4em;
+	color: #E394A7;
+    font-weight: normal;
+    margin: 0 0 0 20px;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1em;
 }
 
 .cbp-af-header nav a:hover {

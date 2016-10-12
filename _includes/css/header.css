@@ -3,7 +3,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	    background: #AFCD69;
+	    background: #FFFFFF;
 	z-index: 10000;
 	overflow: hidden;
 	-webkit-transition: height 0.3s;
@@ -21,13 +21,11 @@
 .cbp-af-header nav {
 	display: inline-block;
 	position: relative;
+	width: 69%;
+	text-align: right;
 }
 
  /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
-.cbp-af-header h1,
-.cbp-af-header nav a {
-	line-height: 230px;
-}
 
 .cbp-af-header h1 {
 	text-transform: uppercase;
@@ -41,15 +39,14 @@
     font-weight: 600;
 }
 
-.cbp-af-header nav {
-	float: right;
-}
-
 .cbp-af-header nav a {
-	color: #aaa;
-	font-weight: 700;
-	margin: 0 0 0 20px;
-	font-size: 1.4em;
+	color: #E394A7;
+    font-weight: normal;
+    margin: 0 0 0 20px;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1em;
 }
 
 .cbp-af-header nav a:hover {
