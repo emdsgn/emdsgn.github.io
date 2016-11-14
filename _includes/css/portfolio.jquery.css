@@ -1,0 +1,164 @@
+.thumbs {
+                display: block;
+            }
+
+.thumbs {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.thumbs li {
+    display: inline-block;
+    height: 200px;
+    overflow: hidden;
+    padding: 0;
+    float: left;
+    position: relative;
+}
+
+.thumbs li a.thumbnail {
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-color: #cecece;
+    background-position-x: 50%;
+	display: block;
+	/*overflow: hidden;*/
+    box-sizing: border-box;
+	transition: opacity 0.3s;
+	-webkit-transition: opacity 0.3s;
+	-moz-transition: opacity 0.3s;
+	z-index: 9;
+    width: 100%;
+    height: 100%;
+}
+
+.thumbs li a.thumbnail h4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.5em;
+    text-transform: uppercase;
+    background-color: rgba(0,0,0,0.55);
+    color: rgba(255,255,255,0.7);
+    font-size: 0.8em;
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.thumbs li a.thumbnail .description {
+    padding: 0;
+    position: absolute;
+    height: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: inherit;
+    opacity: 0;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    color: #282828;
+    background-color: rgba(255,255,255,0.65);
+    font-size: 1em;
+    padding: 0.5em;
+    box-sizing: inherit;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.thumbs li a.thumbnail .active-arrow {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid #FFF;
+    bottom: -2px;
+    z-index: 99;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+@media (max-width: 970px)  {
+	.thumbs li {
+		width: 50% !important;
+	}
+	.media iframe{
+		width: 100%;
+	}
+}
+
+@media (max-width: 1200px) and (min-width: 970px) {
+    .thumbs li {
+        width: 33.3333% !important;
+    }
+}
+
+.thumbs li a.thumbnail:hover .description {
+	height: 50px;
+	opacity: 1;
+}
+
+.thumbs li.content {
+	width: 100% !important;
+	display: none;
+	background: #FFF;
+	float: none;
+    height: inherit;
+    position: relative;
+    padding: 2em;
+    text-align: justify;
+}
+
+.thumbs li.content h3 {
+    display: inline-block;
+}
+
+.thumbs li.content .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #f5d6dd;
+    cursor: pointer;
+    font-weight: normal;
+    font-family: -webkit-pictograph;
+    font-size: 76px;
+    line-height: 40px;
+    padding: 0.1em;
+    transition: all 0.8s ease;
+}
+
+.thumbs li.content .close:hover {
+    opacity: 0.7;
+    color: #E394A7;
+}
+
+.thumbs li.content .media {
+    display: none;
+    width: 50%;
+    min-height: 200px;
+}
+
+.thumbs li.content .info {
+    display: inline-block;
+    width: 100%;
+}
+
+@media (max-width: 1080px) {
+	.close {
+		right: 0 !important;
+		top: 7px !important;
+	}
+}
+@media (max-width: 590px) {
+	.thumbs li {
+		width: 100% !important;
+	}
+}
+
+.portfolio-content {
+    display: none;
+}
