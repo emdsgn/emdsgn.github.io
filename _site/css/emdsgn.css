@@ -80,13 +80,15 @@ body {
   padding-bottom: 0;
 }
 
-.body-link {
+.body-link,
+.link {
   text-decoration: none;
   color: #E394A7;
   transition: all 0.8s;
 }
 
-.body-link:hover {
+.body-link:hover,
+.link:hover {
   text-decoration: none;
   color: #E394A7;
   font-weight: bold;
@@ -148,7 +150,7 @@ section.module.parallax h1 {
     letter-spacing: -2px;
     text-align: center;
     margin: 0;
-    padding: 330px 1em 170px 1em;
+    padding: 308px 1em 170px 1em;
     text-transform: uppercase;
     line-height: 51px;
 }
@@ -165,9 +167,9 @@ section.module.parallax-1 {
     letter-spacing: 1px;
     text-transform: uppercase;
     font-style: italic;
-    line-height: 20px;
+    line-height: 26px;
     margin-bottom: 1em;
-    font-size: 16px;
+    font-size: 0.4em;
     font-weight: 300;
 }
 

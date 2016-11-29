@@ -1,12 +1,12 @@
 ---
 layout: default
-title: emdsgn - Mansura Chowdhury | Graphic Designer & Front End Developer
+title: Mansura Chowdhury | Designer
 ---
 
 <section class="module parallax parallax-1">
   <div class="container">
-    <h1 class="animated bounceInDown"><b>Mansura</b> Chowdhury</span>
-    <p>Web designer</p></h1>
+    <h1 class="animated bounceInDown"><b>Mansura</b><br>Chowdhury</span>
+    <p>Designer</p></h1>
   </div>
 </section>
 
@@ -25,10 +25,16 @@ title: emdsgn - Mansura Chowdhury | Graphic Designer & Front End Developer
 
     <ul class="thumbs">
             <li class="player" data-players-team="website">
-                <a href="#thumb4" class="thumbnail" style="background-image: url('../img/projects/giraffebaby.jpg')"><!-- <h4>Web design</h4> --><span class="description">GiraffeBaby</span></a>
+                <a href="#thumb15" class="thumbnail" style="background-image: url('../img/projects/amss.jpg')"><!-- <h4>Web design</h4> --><span class="description">AMSS Application</span></a>
+            </li>
+            <li class="player" data-players-team="website">
+                <a href="#thumb14" class="thumbnail" style="background-image: url('../img/projects/avestia.jpg')"><!-- <h4>Web design</h4> --><span class="description">Avestia Publishing</span></a>
             </li>
             <li class="player" data-players-team="ux">
                 <a href="#thumb5" class="thumbnail" style="background-image: url('../img/projects/spoil3.jpg')"><!-- <h4>SEO</h4> --><span class="description">Spoil Alert</span></a>
+            </li>
+            <li class="player" data-players-team="website">
+                <a href="#thumb4" class="thumbnail" style="background-image: url('../img/projects/giraffebaby.jpg')"><!-- <h4>Web design</h4> --><span class="description">GiraffeBaby</span></a>
             </li>
             <li class="player" data-players-team="illustrations">
                 <a href="#thumb8" class="thumbnail" style="background-image: url('../img/projects/pet1.jpg')"><!-- <h4>SEO</h4> --><span class="description">Pet Circus</span></a>
@@ -60,14 +66,21 @@ title: emdsgn - Mansura Chowdhury | Graphic Designer & Front End Developer
             <li class="player" data-players-team="illustrations">
                 <a href="#thumb12" class="thumbnail" style="background-image: url('../img/projects/stevie1.jpg')"><!-- <h4>Web design</h4> --><span class="description">Stevie Wonder Poster</span></a>
             </li>
+            <li class="player" data-players-team="website">
+                <a href="#thumb13" class="thumbnail" style="background-image: url('../img/projects/confTemplate.jpg')"><!-- <h4>Web design</h4> --><span class="description">Conference Website Templates</span></a>
+            </li>
         </ul>
 
         <div class="portfolio-content">
+            {% include amss.html %}
+            {% include confTemplate.html %}
+            {% include avestia.html %}
+            {% include spoil.html %}
             {% include csc.html %}
             {% include nitor.html %}
             {% include dps.html %}
             {% include giraffebaby.html %}
-            {% include spoil.html %}
+            
             {% include bookit.html %}
             {% include emma.html %}
             {% include petcircus.html %}
